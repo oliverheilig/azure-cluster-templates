@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Deploy a mutiple Linux VMs in West US",
+  "description": "This template allows you to deploy a simple Linux VM using a few different options for the Ubuntu version, using the latest patched version. This will deploy in West US on a D1 VM Size.",
+  "summary": "This template takes a minimum amount of parameters and deploys multiple Linux VMs, using the latest patched version.",
+  "githubUsername": "oliverheilig",
+  "dateUpdated": "2016-01-19"
+}
