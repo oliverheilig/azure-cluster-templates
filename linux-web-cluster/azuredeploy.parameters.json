@@ -18,10 +18,10 @@
       "value": 2
     },
     "fileUris": {
-      "value": "https://raw.githubusercontent.com/oliverheilig/azure-cluster-templates/master/linux-web-cluster/install-java.sh"
+      "value": "https://raw.githubusercontent.com/oliverheilig/azure-cluster-templates/master/linux-web-cluster/runme.sh"
     },
     "commandToExecute": {
-      "value": "./install-java.sh"
+      "value": "./runme.sh"
     }
   }
 }
