@@ -1,6 +1,6 @@
 # Deploy multiple Linux VMs (without public virtual IP)
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Foliverheilig%2Fazure-cluster-templates%2Fmaster%2Fvm-simple-linux-multi-novip%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Foliverheilig%2Fazure-cluster-templates%2Fmaster%2Flinux-worker-cluster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a><a  target="_blank">
 

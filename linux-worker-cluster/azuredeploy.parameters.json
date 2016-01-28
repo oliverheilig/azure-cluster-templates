@@ -8,14 +8,17 @@
     "adminPassword": {
       "value": "GEN-PASSWORD"
     },
-    "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE"
-    },
     "ubuntuOSVersion": {
       "value": "14.04.2-LTS"
     },
 	"instanceCount": {
       "value": 2
+    },
+    "fileUris": {
+      "value": "https://raw.githubusercontent.com/oliverheilig/azure-cluster-templates/master/linux-worker-cluster/install-java.sh"
+    },
+    "commandToExecute": {
+      "value": "./install-java.sh"
     }
   }
 }

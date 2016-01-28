@@ -31,7 +31,20 @@
       "metadata": {
         "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values: 12.04.5-LTS, 14.04.2-LTS, 15.10."
       }
-    }
+    },
+    "fileUris": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "The uri list of files. Split by a space."
+      }
+    },
+    "commandToExecute": {
+      "type": "string",
+      "metadata": {
+        "description": "The command to execute."
+       }
+	}
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'salinuxvm')]",
@@ -173,6 +186,28 @@
           }
         }
       }
-    }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "name": "[concat(variables('vmName'), copyIndex(), '/installcustomscript')]",
+      "apiVersion": "[variables('apiVersion')]",
+      "location": "[variables('location')]",
+      "copy": { 
+         "name": "scriptcopy", 
+         "count": "[parameters('instanceCount')]"
+      }, 
+      "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'), copyIndex())]"
+      ],
+      "properties": {
+        "publisher": "Microsoft.OSTCExtensions",
+        "type": "CustomScriptForLinux",
+        "typeHandlerVersion": "1.3",
+        "settings": {
+          "fileUris": "[split(parameters('fileUris'), ' ')]",
+          "commandToExecute": "[parameters('commandToExecute')]"
+        }
+      }
+	}	  
   ]
 }
